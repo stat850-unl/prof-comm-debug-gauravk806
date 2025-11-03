@@ -1,0 +1,59 @@
+---
+title: "Untitled"
+author: "Gaurav Khadka"
+format: 
+  beamer: 
+    default
+  revealjs: 
+    default
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+-   Introduce yourself and show a picture of yourself
+-   Provide basic biographical information: birthday, where you grew up
+-   Show a picture of your favorite animal
+-   Provide your favorite plot, generated in either R or python. (This can be one you've generated in this class). Ensure that the code does not show, but the plot does.
+-   Provide a link to your CV, which you will generate in the next part.
+
+# Introduction
+
+My name is **Gaurav Khadka**. I am doing my masters in Construction Engineering and Management at UNL. I love playing guitar, but, I wish I could sing. 😁
+
+![Uncle-Style Selfie During Dashain (Our greatest festival)](PXL_20251005_192949961.RAW-01.COVER.jpg){width="200"}
+
+# Biographical Information
+
+**Birthday**: October 14
+
+**Grew up in**: Chitwan, Nepal
+
+# My Favorite Animal
+
+![Cute Doggo](dog-67.jpg){width="360"}
+
+# Favorite Plot that I Generated in R
+
+![](Boxplot_VfM_by_Sector.png){width="728"}
+
+# CV
+
+\[Download my CV (PDF)\] (CV/CV.pdf)

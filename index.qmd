@@ -2,9 +2,8 @@
 title: "Homework: Reproducibility and Professional Communication"
 execute:
   error: true
-author: "Your Name"
+author: "Gaurav Khadka"
 output: html_document
-
 ---
 
 ```{r setup, include=FALSE}
@@ -12,21 +11,19 @@ knitr::opts_chunk$set(echo = TRUE)
 options(digits = 3)
 ```
 
-
 # Reproducible Examples & Debugging
 
-In the following examples, evaluate each problem using the criteria of a minimal reproducible example from [this StackOverflow post](https://stackoverflow.com/help/minimal-reproducible-example). 
+In the following examples, evaluate each problem using the criteria of a minimal reproducible example from [this StackOverflow post](https://stackoverflow.com/help/minimal-reproducible-example).
 
-Specifically, address the following things: 
+Specifically, address the following things:
 
-1. Are the question and problem description complete?
+1.  Are the question and problem description complete?
 
-2. Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
+2.  Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
 
-3. Is the example minimal? Does it include extra code or information that is not necessary?
+3.  Is the example minimal? Does it include extra code or information that is not necessary?
 
-4. Does the question describe any attempted solutions?
-
+4.  Does the question describe any attempted solutions?
 
 Then, using what you know about R and Python, try to debug the problem using the strategies in [the debugging chapter](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/06-debugging.html). Once you are thoroughly stumped, or you believe you have solved the problem, compare your solutions to those given on StackOverflow using the link.
 
@@ -34,33 +31,31 @@ Then, using what you know about R and Python, try to debug the problem using the
 
 > I created the following function to append new strings on a vector of strings called "meals". However, when I use this function to append an string input into my "meals" vector, it does not work.
 
-```
+```         
  add <- function(str) {
       meals <- append(meals, as.character(str))  
     }
 ```
 
-[Link](https://stackoverflow.com/questions/39795961/why-doesnt-this-r-function-work?noredirect=1&lq=1) to original SO post. 
+[Link](https://stackoverflow.com/questions/39795961/why-doesnt-this-r-function-work?noredirect=1&lq=1) to original SO post.
 
+------------------------------------------------------------------------
 
----
+1.  Are the question and problem description complete?
 
-1. Are the question and problem description complete?
+> I think the question and problem description are only sufficient enough to give people idea of what the original poster(OP) is working on. However, one cannot know what OP is exactly getting as current output and how that differs from what is expected. Also, one cannot know how the "meals" string is defined. If there are any errors, what are they?
 
-> <!-- Your answer here -->
+2.  Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
 
-2. Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
+> Yes, the issue is somewhat reproducible. It has description and code that reproduces the problem. To improve the reproducibility, the code defining "meals" string and current output or error messages could be added.
 
-> <!-- Your answer here -->
+3.  Is the example minimal? Does it include extra code or information that is not necessary?
 
-3. Is the example minimal? Does it include extra code or information that is not necessary?
+> Yes, it is minimal. It does not include extra code or information that is not necessary. Instead, it lacks some essential information.
 
-> <!-- Your answer here -->
+4.  Does the question describe any attempted solutions?
 
-4. Does the question describe any attempted solutions?
-
-> <!-- Your answer here -->
-
+> No, the question does not describe any attempted solutions.
 
 ## Function not working R
 
@@ -68,7 +63,7 @@ Then, using what you know about R and Python, try to debug the problem using the
 
 > Anyway, this was supposed to be my first function. Yet, it doesn't work! But when I type out all the steps individually, it runs just fine... Can anyone tell me why?
 
-```
+```         
 pollutantmean <- function(directory, pollutant, id = 1:332){
     x<- list.files("/Users/mike******/Desktop/directory", full.names=TRUE)
     y<- lapply(x, read.csv)
@@ -91,69 +86,63 @@ mean(z$nitrate,na.rm=TRUE)
 [1] 0.7976266
 ```
 
-
 [Link](https://stackoverflow.com/questions/24123224/function-not-working-r/24141502)
 
+------------------------------------------------------------------------
 
----
+1.  Are the question and problem description complete?
 
-1. Are the question and problem description complete?
+> Yes, the question and problem description are complete because it clearly presents the code along with the error message. It also shows what the expected output is. Since it gives the context that this is from the course offered by Johns Hopkins on R programming, it makes it even easier for people to help.
 
-> <!-- Your answer here -->
+2.  Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
 
-2. Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
+> Yes, I think the issue is reproducible. Since, the data is standard data (specdata) from the popular course offered by Johns Hopkins on R programming, it is possible to work with the same data as well. Both the code and error message are provided, which makes it easier for others to compare with their output.
 
-> <!-- Your answer here -->
+3.  Is the example minimal? Does it include extra code or information that is not necessary?
 
-3. Is the example minimal? Does it include extra code or information that is not necessary?
+> Yes, the example is almost minimal. It does not include any unnecessary or extra codes. Just the context that person is beginner and seen posts about the course sounds unnecessary.
 
-> <!-- Your answer here -->
+4.  Does the question describe any attempted solutions?
 
-4. Does the question describe any attempted solutions?
-
-> <!-- Your answer here -->
-
+> Yes, the question describe the attempted solution that worked when the code was run individually and not using the function.
 
 ## Inexplicable error when trying to export my R notebook
 
 > Getting this error from R Markdown when trying to export my .RMD
 
-```
+```         
 "Error in filter(Gastropods, Species == "Cellana") :  object 'Species' not found Calls: <Anonymous> ... withCallingHandlers -> withVisible -> eval -> eval -> filter"
 ```
 
 > However, all my plots are coming out successfully. I can clearly see in the data that the species column is there and that Cellana is a species. No spelling errors or anything.
 
-> My first 20 or so lines of code are below (between the ### symbols)
+> My first 20 or so lines of code are below (between the \### symbols)
 
-
-````{r echo=FALSE}
+```{r echo=FALSE}
 cat(paste(readLines("https://raw.githubusercontent.com/unl-statistics/stat850/refs/heads/main/homework/debugging_3.txt"), collapse = '\n'))
-````
+```
 
 You can find this sample file [here](https://raw.githubusercontent.com/unl-statistics/stat850/refs/heads/main/homework/debugging_3.txt)
 
-
 [Link](https://stackoverflow.com/questions/44193367/inexplicable-error-when-trying-to-export-my-r-notebook)
 
----
+------------------------------------------------------------------------
 
-1. Are the question and problem description complete?
+1.  Are the question and problem description complete?
 
-> <!-- Your answer here -->
+> Yes, the question and problem description are complete. The question provides the  script and the exact error message received.  
 
-2. Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
+2.  Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
 
-> <!-- Your answer here -->
+> I think the issue is partly reproducible. It provides all the code and description but it could be better if it had a sample of data provided.
 
-3. Is the example minimal? Does it include extra code or information that is not necessary?
+3.  Is the example minimal? Does it include extra code or information that is not necessary?
 
-> <!-- Your answer here -->
+> The example appears to be minimal without any extra code or unnecessary information.
 
-4. Does the question describe any attempted solutions?
+4.  Does the question describe any attempted solutions?
 
-> <!-- Your answer here -->
-
+> No, it does not describe any attempted solutions.
 
 ## Python if elif else statement
 
@@ -161,11 +150,11 @@ You can find this sample file [here](https://raw.githubusercontent.com/unl-stati
 
 > However, I can't run the program to where it works properly.
 
-> What ever my total is the same amount comes out as $6 for US and $8 for Canada. I can't seem to get pass that.
+> What ever my total is the same amount comes out as \$6 for US and \$8 for Canada. I can't seem to get pass that.
 
 > Example:
 
-```
+```         
 total = raw_input('What is the total amount for your online shopping?')
 country = raw_input('Shipping within the US or Canada?')
 
@@ -190,50 +179,50 @@ if country == "Canada":
         print "FREE"
 ```
 
-
 [Link](https://stackoverflow.com/questions/19371643/python-if-elif-else-statement)
 
----
+------------------------------------------------------------------------
 
-1. Are the question and problem description complete?
+1.  Are the question and problem description complete?
 
-> <!-- Your answer here -->
+> The question explains the issue and also the expected behaviour. It also provides the code to see where the error exists.
 
-2. Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
+2.  Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
 
-> <!-- Your answer here -->
+> Yes, the issue is reproducible with the provided code and explanation.
 
-3. Is the example minimal? Does it include extra code or information that is not necessary?
+3.  Is the example minimal? Does it include extra code or information that is not necessary?
 
-> <!-- Your answer here -->
+> The example is minimal as it only contains necessary steps and no irrelevant codes.
 
-4. Does the question describe any attempted solutions?
+4.  Does the question describe any attempted solutions?
 
-> <!-- Your answer here -->
-
+> No, the question does not descibe any attempted solutions.
 
 # Professional Communication
 
 ## Slides
 
-Create a set of quarto slides in the file slides.qmd. 
+Create a set of quarto slides in the file slides.qmd.
 
-Set two different output formats - for instance, reveal.js and beamer. 
+Set two different output formats - for instance, reveal.js and beamer.
 
 In your slides:
 
-- Introduce yourself and show a picture of yourself
-- Provide basic biographical information: birthday, where you grew up
-- Show a picture of your favorite animal
-- Provide your favorite plot, generated in either R or python. (This can be one you've generated in this class). Ensure that the code does not show, but the plot does.
-- Provide a link to your CV, which you will generate in the next part.
+-   Introduce yourself and show a picture of yourself
+-   Provide basic biographical information: birthday, where you grew up
+-   Show a picture of your favorite animal
+-   Provide your favorite plot, generated in either R or python. (This can be one you've generated in this class). Ensure that the code does not show, but the plot does.
+-   Provide a link to your CV, which you will generate in the next part.
 
 ## CV
 
 Select a CV template that uses either LaTeX or Markdown:
 
-- https://github.com/kazuyanagimoto/quarto-awesomecv-typst
-- https://github.com/schochastics/quarto-cv
-- https://www.overleaf.com/latex/templates/tagged/cv
+-   https://github.com/kazuyanagimoto/quarto-awesomecv-typst
+-   https://github.com/schochastics/quarto-cv
+-   https://www.overleaf.com/latex/templates/tagged/cv
 
-Use the template to create a curriculum vitae that has your education, work experience, and any other sections you would like to include. Compile your CV and link to it in your slides. 
+Use the template to create a curriculum vitae that has your education, work experience, and any other sections you would like to include. Compile your CV and link to it in your slides.
+
+
