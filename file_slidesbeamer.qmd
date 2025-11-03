@@ -1,0 +1,30 @@
+---
+title: "About Me"
+author: "Gaurav Khadka"
+format: beamer
+editor: visual
+---
+
+# Introduction
+
+My name is **Gaurav Khadka**. I am doing my masters in Construction Engineering and Management at UNL. I love playing guitar, but, I wish I could sing. 😁
+
+![Uncle-Style Selfie During Dashain (Our greatest festival)](PXL_20251005_192949961.RAW-01.COVER.jpg){width="112"}
+
+# Biographical Information
+
+**Birthday**: October 14
+
+**Grew up in**: Chitwan, Nepal
+
+# My Favorite Animal
+
+![Cute Doggo](dog-67.jpg){width="270"}
+
+# Favorite Plot that I Generated in R
+
+![](Boxplot_VfM_by_Sector.png){width="420" height="250"}
+
+# CV
+
+[Download my CV (PDF)](CV/CV.pdf)
